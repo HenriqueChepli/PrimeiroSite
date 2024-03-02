@@ -11,11 +11,10 @@ a {
     width: 100%;
     background-image: linear-gradient(to left,#191919 ,#131212, #131313, #1b1b1b);
     color: #eee;
-    padding: 20px;
 }
 
 #navbar-container {
-    width: 80%;
+    max-width: 80%;
     height: 100%;
     margin: auto;
     display: flex;
@@ -55,6 +54,7 @@ a {
 
 @media (max-width:800px) {
     #navbar-container {
+        max-width: 400px;
         flex-direction: column;
         padding: 20px 0;
     }
