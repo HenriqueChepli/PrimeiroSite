@@ -2,105 +2,165 @@
   margin: 0;
   padding: 0;
   border: 0;
-  overflow: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 body{
  background-image: linear-gradient(to left,#191919 ,#131212, #131313, #1b1b1b);
- display: flex;
- justify-content: center;
- align-items: center;
  color: #fff;
- height: 100vh;
 }
 
-main #em{
-  font-size: 2vw;
+
+/* Banner */
+
+
+#banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 75px 20px;
 }
 
-main #breve{
-  font-size: 15vw;
+#banner h1{
+  font-size: 3.5vw;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  margin: 0 0 25px 0;
 }
 
-main #breve em{
-  color: #e91e63;
-  font-style: normal;
-}
-
-main #novidades{
-  font-size: 4vw;
-  text-align: end;
-  background-image: linear-gradient(to left, #212121, #e91e63);
-  padding: 7px 40px 7px 0;
-  border-radius: 250px;
-}
-
-main article{
-  position: absolute;
-  right: 35px;
-  bottom: 20px;
-  padding: 50px;
-  border-radius: 20px;
-  background-image:  linear-gradient(to left, #e91e63, #212121, #212121, #212121);
+#banner button{
+  display: flex;
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #191919;
+  border: 1px solid #fff;
   transition: all .55s ease-in-out;
 }
 
-main article:hover{
+#banner button em{
+  color: #f7f303;
+  font-style: normal;
+  transition: all .55s ease-in-out;
+}
+
+#banner button:hover{
+  color: #0d0d0d;
+  background-color: #fff;
   transform: scale(1.1);
 }
 
-@media (max-width: 950px) {
-  main #em{
-    font-size: 2.5vw;
+#banner button:hover em{
+  color: #000000;
+}
+
+#lines{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#lines #lineReborn{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+#lines #title h1{
+  font-size: 90px;
+  letter-spacing: 2.5px;
+}
+
+#lines #title h1 em{
+  color: #f7f303;
+  font-style: normal;
+}
+
+#lines #lineReborn .players{
+  display: flex;
+  margin: 6vh 20px 0 20px;
+  padding: 30px;
+  gap: 20px;
+}
+
+#lines #lineReborn .players .playerPerfil{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+#lines #lineReborn .players .playerPerfil img{
+  width: 70px;
+  border-radius: 50%;
+}
+
+#lines #lineReborn .players .playerPerfil h3{
+  font-size: 20px;
+}
+
+#lines #lineReborn .players .playerEstatisticas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+#lines #lineReborn .players .playerConta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lines #lineReborn .players .playerConta img{
+  width: 400px;
+  border-radius: 20px;
+  border: 2px solid #ffee00;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px){
+  #lines #title h1{
+    font-size: 55px;
   }
-  
-  main #breve{
-    font-size: 20vw;
-  }
-  
-  main #novidades{
-    font-size: 5vw;
-    text-align: end;
-    background-image: linear-gradient(to left, #212121, #e91e63);
-    padding: 7px 40px 7px 0;
-    border-radius: 250px;
+
+  #lines #lineReborn .players{
+    flex-direction: column;
   }
 }
 
-@media (max-width: 950px) {
-  main #em{
-    font-size: 3vw;
+@media (max-width: 450px){
+  #lines #title h1{
+    font-size: 30px;
+  }
+
+  #lines #lineReborn .players{
+    flex-direction: column;
+  }
+
+  #lines #lineReborn .players .playerPerfil img{
+    width: 40px;
   }
   
-  main #breve{
-    font-size: 25vw;
-  }
-  
-  main #novidades{
-    font-size: 7vw;
-    text-align: end;
-    background-image: linear-gradient(to left, #212121, #e91e63);
-    padding: 7px 40px 7px 0;
-    border-radius: 250px;
+  #lines #lineReborn .players .playerPerfil h3{
+    font-size: 15px;
   }
 
-  main article{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    padding: 50px;
-    border-radius: 20px;
-    background-image:  linear-gradient(to left, #e91e63, #212121, #212121, #212121);
-    transition: all .55s ease-in-out;
-  }
-
-  main article h1{
-    font-size: 4vw;
-  }
-
-  main article h3{
-    font-size: 3vw;
+  #lines #lineReborn .players .playerConta img{
+    width: 250px;
   }
 }
-
