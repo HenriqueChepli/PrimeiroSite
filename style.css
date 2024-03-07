@@ -138,20 +138,25 @@ section .title h1 em{
 
 /* Horarios */
 
-#tabela {
-  min-width: 500px;
+#horarios{
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 0 0 50px 0;
+}
+
+#tabela {
   text-align: center;
   border-collapse: collapse;
-  padding: 0 0 50px 0;
+  overflow-x: hidden;
   }
 
 th, td{
   border: 1px solid grey;
   padding: 15px;
-  font-size: 1.2vw;
+  font-size: 16px;
 }
 
 li{
@@ -174,12 +179,7 @@ li{
   }
 
   #tabela{
-    overflow-x: auto;
-  }
-
-  th, td{
-    padding: 10px;
-    font-size: 16px;
+    overflow: auto;
   }
 }
 
