@@ -79,12 +79,17 @@ body{
   gap: 50px;
 }
 
-#lines #title h1{
+section .title{
+  margin: 70px 0 70px 0;
+  text-align: center;
+}
+
+section .title h1{
   font-size: 90px;
   letter-spacing: 2.5px;
 }
 
-#lines #title h1 em{
+section .title h1 em{
   color: #f7f303;
   font-style: normal;
 }
@@ -131,20 +136,55 @@ body{
   border: 2px solid #ffee00;
 }
 
+/* Horarios */
+
+#tabela {
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 0 0 50px 0;
+  }
+
+th, td{
+  border: 1px solid grey;
+  padding: 15px;
+  font-size: 1.2vw;
+}
+
+li{
+  color: grey;
+}
+
+.horas:hover{
+  background-color: #212121;
+}
+
 /* Responsividade */
 
 @media (max-width: 700px){
-  #lines #title h1{
+  section .title h1{
     font-size: 55px;
   }
 
   #lines #lineReborn .players{
     flex-direction: column;
   }
+
+  #tabela{
+    overflow-x: auto;
+  }
+
+  th, td{
+    padding: 10px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 450px){
-  #lines #title h1{
+  section .title h1{
     font-size: 30px;
   }
 
